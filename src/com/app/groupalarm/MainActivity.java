@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 		webview.setWebChromeClient(new WebChromeClient());
 		
 		//Enable access to all methods in JS within WebAppInterface
-		webview.addJavascriptInterface(new WebAppInterface(this, webview), "Android");
+		webview.addJavascriptInterface(new WebAppInterface(this), "Android");
 		
 		webview.loadUrl("file:///android_asset/dist/index.html");
 		

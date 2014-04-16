@@ -14,18 +14,15 @@ public class WebAppInterface {
 	
 	Context mContext;
 	String token;
-	WebView view;
 	
-	public WebAppInterface(Context c, WebView v){
+	public WebAppInterface(Context c){
 		
 		mContext = c;
-		view = v;
 	}
 	
 	@JavascriptInterface
 	public void facebookLogin(){
 		
-		Log.i("Facebook Login Call", "HELLO");
 		// start Facebook Login
 	    Session.openActiveSession((Activity) mContext, true, new StatusCallback() {
 			
