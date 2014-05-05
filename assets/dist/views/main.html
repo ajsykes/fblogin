@@ -1,1 +1,5 @@
-<div ng-controller="AuthCtrl"><button ng-click="login();">Facebook Login</button></div>
+<div class="center" id="AuthCtrl" ng-controller="AuthCtrl"><button class="facebook" ng-click="login();"><i class="fa fa-2x fa-facebook-square"></i> Facebook Login</button><script>function processToken(tok){
+      angular.element('#AuthCtrl').scope().$apply(function(scope){
+        scope.performLogin(tok);
+      });
+    }</script></div>

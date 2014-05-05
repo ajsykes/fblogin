@@ -5,5 +5,9 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="app_id">715464251850018</string>
-
+    <string name="title_activity_set_alarm">SetAlarmActivity</string>
+    <string name="title_activity_sensor">Sensor</string>
+    <string name="stop_alarm">Stop</string>
+	<string name="snooze_alarm">Snooze</string>
+	<string name="alarm_dialog_message">Alarm: </string>
 </resources>
