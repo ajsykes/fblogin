@@ -27,7 +27,7 @@ public class SensorIntentService extends IntentService implements SensorEventLis
 	private Sensor accelerometerSensor;
 	private Sensor lightSensor;
 	
-	private static Firebase firebaseRef;
+	private Firebase firebaseRef;
 	
 	private AccelerometerState accelerometerState;
 	private LightState lightState;
@@ -52,13 +52,7 @@ public class SensorIntentService extends IntentService implements SensorEventLis
 		super("SensorIntentService");
 	}
 
-	
-	public static void setSnoozed() {
-		firebaseRef.child("snoozed").setValue(1);
-	}
-	public static void setStopped() {
-		firebaseRef.child("stopped").setValue(0);
-	}
+
 	@Override
 	protected void onHandleIntent(Intent intent) {
 		if (intent != null) {

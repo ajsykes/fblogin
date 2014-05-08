@@ -32,6 +32,9 @@ public class AlarmReceiver extends BroadcastReceiver {
 		WakeLocker.acquire(context);
 		
 		Intent in = new Intent(context.getApplicationContext(), AlarmActivity.class);
+        in.putExtra("alarmid", alarmid);
+        in.putExtra("userid", userid);
+        in.putExtra("expiretime", expireTime);
 		in.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_NEW_TASK);
 		context.startActivity(in);
 		

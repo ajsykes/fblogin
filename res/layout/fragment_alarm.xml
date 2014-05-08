@@ -29,7 +29,8 @@
         android:text="SNOOZE"
         android:textSize="50sp" 
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:onClick="snooze"/>
     
     <LinearLayout 
         android:layout_width="match_parent"
@@ -37,22 +38,23 @@
         android:orientation="horizontal"
         android:layout_weight="50"
         android:gravity="bottom">
-        
+<!--         
         <Button 
 			android:id="@+id/button_missMeeting"
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:text="Missing Meeting"
             android:textSize="15sp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"/> -->
        
         <Button 
             android:id="@+id/button_alarmToggle"
             android:layout_width="1dp"
             android:layout_height="wrap_content"
-            android:text="Make it die"
+            android:text="STOP"
             android:textSize="15sp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="stop"/>
     </LinearLayout>
     
 

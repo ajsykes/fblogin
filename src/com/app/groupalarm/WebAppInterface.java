@@ -104,7 +104,7 @@ public class WebAppInterface {
      * @param offset Minutes backwards from time that alarm will be set. 
      */
     @JavascriptInterface
-    public void set(String time, String day, String offset, String alarmid, String userid) {
+    public void set(String time, String day, String offset, String alarmid, String userid, String updated) {
 		try {
 			if (day == null) {
 				String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
@@ -180,8 +180,10 @@ public class WebAppInterface {
 			e.printStackTrace();
 			Log.e("interface error", "err", e);
 		}
-
-		Toast.makeText(mContext, "Alarm Set", Toast.LENGTH_SHORT).show();
+		if (updated == "true")
+			Toast.makeText(mContext, "Alarm Updated", Toast.LENGTH_SHORT).show();
+		else
+			Toast.makeText(mContext, "Alarm Set", Toast.LENGTH_SHORT).show();
     }
 	
 	private void setToken(String s){
